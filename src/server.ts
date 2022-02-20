@@ -6,7 +6,8 @@ import compression from 'compression'
 import cors from 'cors'
 
 import indexRoutes from './routes/indexRoutes'
-import postRoutes from './routes/PostsRoutes'
+import PostRoutes from './routes/PostsRoutes'
+import UserRoutes from './routes/UserRoutes'
 
 
 class Server {
@@ -35,7 +36,8 @@ class Server {
 
     routes() {
        this.app.use(indexRoutes)
-       this.app.use('/api/posts',postRoutes)
+       this.app.use('/api/posts',PostRoutes)
+       this.app.use('/api/users',UserRoutes)
 
     }
 
